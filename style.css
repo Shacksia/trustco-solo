@@ -206,9 +206,28 @@ body {
     cursor: pointer;
     padding: 10px;
 }
+@media screen and (max-width: 840px) {
+/* Center Navigation Links */
+.menu-container {
+    
+    gap: 10px;
+}
 
+/* Navigation Links */
+.nav-links {
+ 
+    gap: 10px;
+}
+
+
+.nav-links a {
+    font-size: 0.8rem;
+}
+
+
+}
 /* Responsive Navbar for Mobile */
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 768px) {
     .hamburger {
         display: block;
         position: absolute;
