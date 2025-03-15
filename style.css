@@ -500,6 +500,7 @@ Letter-spacing:-2%
 .text-content {
     display: flex;
     justify-content:space-around;
+    
     gap:2rem;
 width: 100%;
 }
@@ -560,5 +561,35 @@ width: 100%;
 .video-container:hover .play-icon {
     background: rgba(122, 122, 122, 0.8);
 }
+/* Responsive Adjustments for video section*/
+@media (max-width: 780px) {
+    .play-icon img {
+        width: 25px;
+        height: 25px;
+    }
+    .video-title{
+       font-size: 2.4rem;
+    }
+    .video-description{
+        font-size: 1rem;
+     }
+}
 
+
+/* Responsive Adjustments for video section*/
+@media (max-width: 480px) {
+    .play-icon img {
+        width: 17px;
+        height: 17px;
+    }
+    .video-title{
+        width: 100%;
+    }
+    .video-description{
+        width: 100%;
+    }
+    .text-content{
+        flex-direction: column;
+    }
+}
 
