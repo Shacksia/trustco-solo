@@ -34,7 +34,9 @@ body {
     margin: 0 auto;
     padding: 0;
 }
-
+.navbar-section{
+    background-color: var(--background-color);
+}
 /* Hero Section */
 #hero {
     background-color: var(--background-color);
@@ -119,7 +121,7 @@ body {
 }
 
 .login-btn:hover {
-    background-color: #ffffffce;
+    background-color: #ffffff79;
 }
 
 /* Sign-Up Button */
