@@ -38,7 +38,7 @@ body {
 /* Hero Section */
 #hero {
     background-color: var(--background-color);
-    padding: 0;
+    padding: 0 ;
 }
 
 /* Navbar Styling */
@@ -268,7 +268,7 @@ body {
     justify-content: center;
     text-align: center;
     gap: 20px;
-    padding: 30px 100px;
+    padding: 2rem 4.9rem;
 }
 
 /* Wrapper for images */
@@ -342,7 +342,7 @@ Letter-spacing:-2%
     flex-direction: column;
 }
     .hero-frame-responsive {
-        padding: 1.5rem;
+        padding: 2rem 1.5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
