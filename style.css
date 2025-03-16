@@ -11,7 +11,7 @@
 /* Root Variables */
 :root {
     --primary-color: #043A53;
-    --secondary-color: #6c757d;
+    --secondary-color: #F2F5F629;
     --background-color: #F2F5F6;
     --text-color: #333;
     --primary-btn-color: #043A53;
@@ -767,3 +767,128 @@ font-size: 0.9rem;
         font-size: 0.9rem;
         }
 }
+
+/* Building Bridges styling  */
+ .bridge-section {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+   
+    padding:0rem 5% 0 0;
+
+}
+#building-bridges .bridge-container {
+   
+    display: flex;
+    align-items: center;
+    gap: 10%;
+
+    /* max-width: 1200px; */
+    /* background: white; */
+    /* border-radius: 10px; */
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+    /* overflow: hidden; */
+}
+#building-bridges .image-container {
+    position: relative;
+    width: 50%;
+    /* flex: 1; */
+}
+#building-bridges .image-container img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.award-badge {
+    position: absolute;
+    bottom: 10%; /* Adjust position below the image */
+    left: 100%; /* Center it */
+    transform: translateX(-50%); /* Fine-tune centering */
+    background: var(--primary-color);
+    color: var(--text-white);
+    /* padding: 25px; */
+    border-radius: 50%;
+    text-align: center;
+    /* font-size: 16px; */
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 220px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 4px solid var(--text-white);
+
+}
+.award-icon-border {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.award-icon {
+    width: 4vw;
+    height: 4vh;
+}
+
+#building-bridges .bridge-head{
+    font-size: 3vw;
+    
+}
+#building-bridges .bridge-subhead{
+    font-size: 1vw;
+    color: var(--text-white);
+    line-height: 1.6;
+    padding: 0%;
+    margin: 0;
+    font-weight: 400;
+}
+#building-bridges .content-container {
+    flex: 1;
+    padding: 0 0 0 30px;
+    gap: 20px;
+}
+#building-bridges h2 {
+    font-size: 3.3rem;
+    line-height: 1.2;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #12141D;
+}
+#building-bridges .highlight {
+    color: #aeb1b4;
+}
+#building-bridges p {
+    font-size: 1.4vw;
+    color: #12141D;
+    margin-bottom: 20px;
+}
+
+.btn-arrow {
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between text and arrow */
+}
+
+.arrow-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px; /* Adjust as needed */
+    height: 28px; /* Same as width for a perfect circle */
+    border-radius: 50%;
+    background-color: var(--secondary-color); /* Background for the rounded arrow */
+    color: var(--text-white); /* Arrow color */
+    font-size: 18px;
+    font-weight: bold;
+}
+
