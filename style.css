@@ -17,7 +17,8 @@
     --primary-btn-color: #043A53;
     --primary-btn-hover: #022c3f;
     --text-white: #FFFFFF;
-    --primary-yellow:#fab412;
+    --primary-yellow: #fab412;
+    --headline: #12141D;
 }
 
 /* Body Styling */
@@ -44,6 +45,10 @@ body {
 #hero {
     background-color: var(--background-color);
     padding: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Navbar Styling */
@@ -115,6 +120,34 @@ body {
     cursor: pointer;
     font-size: 1rem;
     border-radius: 42px;
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    padding: 12px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 42px;
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+}
+
+.arrow-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    color: var(--text-white);
+    font-size: 16px;
+    font-weight: bold;
+
 }
 
 /* Login Button */
@@ -682,8 +715,8 @@ body {
     line-height: 1.2;
 }
 
-.benefits-header p{
-font-size: 1.1rem;
+.benefits-header p {
+    font-size: 1.1rem;
 }
 
 /* Benefits Cards */
@@ -695,7 +728,7 @@ font-size: 1.1rem;
 }
 
 .benefit-card {
-  
+
     background: var(--background-color);
     border-radius: 10px;
     padding: 3%;
@@ -705,28 +738,34 @@ font-size: 1.1rem;
     /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
     transition: 0.3s;
     height: fit-content;
- 
+
 }
-.benefit-card img, .benefit-card h3{
-margin-bottom: 1rem;
+
+.benefit-card img,
+.benefit-card h3 {
+    margin-bottom: 1rem;
 }
-.benefit-card h3{
-font-size: 1.5rem;
-line-height: 1.3;
+
+.benefit-card h3 {
+    font-size: 1.5rem;
+    line-height: 1.3;
 }
-.benefit-card p{
+
+.benefit-card p {
     font-size: 1.1rem;
-    }
+}
+
 /* .benefit-card:hover {
     transform: translateY(-5px);
 } */
 
 /* Responsive Design for benefits*/
-@media (max-width: 1160px){
-     .benefit-cards {
+@media (max-width: 1160px) {
+    .benefit-cards {
         flex-wrap: wrap;
     }
-    .benefits{
+
+    .benefits {
         flex-wrap: wrap;
     }
 }
@@ -735,61 +774,70 @@ line-height: 1.3;
     .benefit-cards {
         flex-direction: column;
     }
-   
+
 }
+
 @media (max-width: 548px) {
-    #benefits{
+    #benefits {
         flex-direction: column;
         gap: 1rem;
         flex-wrap: wrap;
     }
-    .benefits-header{
+
+    .benefits-header {
         align-items: center;
         text-align: center;
-        
+
     }
 
 }
+
 /* Responsive Adjustments for video section*/
 @media (max-width: 480px) {
 
-    #benefits{
+    #benefits {
         flex-direction: column;
         gap: 1rem;
         flex-wrap: wrap;
     }
-    .benefits-header{
+
+    .benefits-header {
         align-items: center;
         text-align: center;
-        
+
     }
 
     /* Heading */
-.benefits-header h2 {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    .benefits-header h2 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
 
-    font-size: 1.7rem;
-    font-weight: bold;
-    line-height: 1;
-}
+        font-size: 1.7rem;
+        font-weight: bold;
+        line-height: 1;
+    }
 
-.benefits-header p{
-font-size: 0.9rem;
-}
-.benefit-card{
-    padding: 8%;
-}
-.benefit-card img, .benefit-card h3{
-    margin-bottom: 0.9rem;
-    }
-    .benefit-card h3{
-    font-size: 1.2rem;
-    line-height: 1.1;
-    }
-    .benefit-card p{
+    .benefits-header p {
         font-size: 0.9rem;
-        }
+    }
+
+    .benefit-card {
+        padding: 8%;
+    }
+
+    .benefit-card img,
+    .benefit-card h3 {
+        margin-bottom: 0.9rem;
+    }
+
+    .benefit-card h3 {
+        font-size: 1.2rem;
+        line-height: 1.1;
+    }
+
+    .benefit-card p {
+        font-size: 0.9rem;
+    }
 }
 
 /* Building Bridges styling  */
@@ -798,19 +846,23 @@ font-size: 0.9rem;
     justify-content: space-between;
     align-items: center;
     padding: 0rem 5% 0 0;
-    flex-wrap: nowrap; /* Ensures items stay in a row */
+    flex-wrap: nowrap;
+    /* Ensures items stay in a row */
 }
 
 #building-bridges .bridge-container {
     display: flex;
     align-items: center;
-    gap: 5%; /* Reduced gap for better alignment */
-    flex-wrap: nowrap; /* Prevents wrapping in desktop view */
+    gap: 5%;
+    /* Reduced gap for better alignment */
+    flex-wrap: nowrap;
+    /* Prevents wrapping in desktop view */
 }
 
 #building-bridges .image-container {
     position: relative;
-    width: 50%; /* Reduced size for better layout */
+    width: 50%;
+    /* Reduced size for better layout */
 }
 
 #building-bridges .image-container img {
@@ -822,8 +874,10 @@ font-size: 0.9rem;
 
 #building-bridges .award-badge {
     position: absolute;
-    bottom: 5%; /* Adjusted for better positioning */
-    left: 95%; /* Ensures it stays in proper alignment */
+    bottom: 5%;
+    /* Adjusted for better positioning */
+    left: 95%;
+    /* Ensures it stays in proper alignment */
     transform: translateX(-50%);
     background: var(--primary-color);
     color: var(--text-white);
@@ -833,8 +887,10 @@ font-size: 0.9rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 220px; /* Reduced size */
-    height: 220px; /* Reduced size */
+    width: 220px;
+    /* Reduced size */
+    height: 220px;
+    /* Reduced size */
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
     border: 3px solid var(--text-white);
 }
@@ -857,7 +913,8 @@ font-size: 0.9rem;
 }
 
 #building-bridges .bridge-head {
-    font-size: 2.5rem; /* Reduced for better fitting */
+    font-size: 2.5rem;
+    /* Reduced for better fitting */
 }
 
 #building-bridges .bridge-subhead {
@@ -869,13 +926,15 @@ font-size: 0.9rem;
 
 #building-bridges .content-container {
     flex: 1;
-    padding: 0 0 0 20px; /* Reduced padding */
+    padding: 0 0 0 20px;
+    /* Reduced padding */
     position: relative;
     gap: 0;
 }
 
 #building-bridges h2 {
-    font-size: 3.3rem; /* Adjusted size */
+    font-size: 3.3rem;
+    /* Adjusted size */
     line-height: 1.2;
     font-weight: bold;
     margin-bottom: 10px;
@@ -887,7 +946,8 @@ font-size: 0.9rem;
 }
 
 #building-bridges p {
-    font-size: 1.2rem; /* Reduced size */
+    font-size: 1.2rem;
+    /* Reduced size */
     color: #12141D;
     margin-bottom: 15px;
 }
@@ -916,72 +976,85 @@ font-size: 0.9rem;
 /* Responsive Design */
 @media (max-width: 1080px) {
     #building-bridges .bridge-container {
-        gap: 5%; /* Reduced gap */
+        gap: 5%;
+        /* Reduced gap */
     }
+
     #building-bridges .award-badge {
-        width: 180px; /* Reduced size */
-        height: 180px; /* Reduced size */
+        width: 180px;
+        /* Reduced size */
+        height: 180px;
+        /* Reduced size */
     }
-    
+
     #building-bridges .award-icon-border {
         width: 30px;
         height: 30px;
         margin-bottom: 7px;
     }
+
     #building-bridges .award-icon-border {
         width: 40px;
         height: 40px;
         margin-bottom: 10px;
     }
-    
+
     #building-bridges .award-icon {
         width: 3vw;
         height: 3vh;
     }
-    
+
     #building-bridges .bridge-head {
-        font-size: 2rem; /* Reduced for better fitting */
+        font-size: 2rem;
+        /* Reduced for better fitting */
     }
-    
+
     #building-bridges .bridge-subhead {
         font-size: 1rem;
         line-height: 1.2;
     }
- 
+
     /* Building Bridges styling  */
-.bridge-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0rem 3% 0 0;
-    flex-wrap: nowrap; /* Ensures items stay in a row */
+    .bridge-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0rem 3% 0 0;
+        flex-wrap: nowrap;
+        /* Ensures items stay in a row */
+    }
 }
-}
+
 @media (max-width: 960px) {
     #building-bridges h2 {
-        font-size: 2.9rem; /* Adjusted size */
+        font-size: 2.9rem;
+        /* Adjusted size */
         line-height: 1;
     }
-  
-    
+
+
     #building-bridges p {
-        font-size: 1rem; /* Reduced size */
+        font-size: 1rem;
+        /* Reduced size */
         margin-bottom: 12px;
     }
 
-    
-   
+
+
 }
+
 @media (max-width: 814px) {
     #building-bridges h2 {
-        font-size: 2.6rem; /* Adjusted size */
+        font-size: 2.6rem;
+        /* Adjusted size */
     }
-  
-    #building-bridges .content-container{
-padding-left: 36px;
+
+    #building-bridges .content-container {
+        padding-left: 36px;
     }
-  
+
 }
+
 @media (max-width: 768px) {
     #building-bridges .bridge-container {
         flex-direction: column-reverse;
@@ -990,30 +1063,35 @@ padding-left: 36px;
         align-items: flex-start;
     }
 
-   
+
     /* Building Bridges styling  */
-.bridge-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0rem 3% 0 0;
-    flex-wrap: nowrap; /* Ensures items stay in a row */
-}
+    .bridge-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0rem 3% 0 0;
+        flex-wrap: nowrap;
+        /* Ensures items stay in a row */
+    }
 
     #building-bridges .image-container {
-        width: 90%; /* Adjusted width */
+        width: 90%;
+        /* Adjusted width */
     }
+
     #building-bridges .image-container img {
         border-radius: 10px;
     }
+
     #building-bridges .content-container {
         padding: 20px;
     }
-   
+
     #building-bridges h2 {
         font-size: 2rem;
         line-height: 1.2;
     }
+
     #building-bridges p {
         font-size: 1rem;
     }
@@ -1021,20 +1099,24 @@ padding-left: 36px;
 
 @media (max-width: 480px) {
     #building-bridges .image-container {
-        width: 80%; /* Adjusted width */
+        width: 80%;
+        /* Adjusted width */
     }
+
     #building-bridges .bridge-section {
         padding: 20px 10px;
     }
+
     #building-bridges h2 {
         font-size: 2rem;
         line-height: 1.2;
     }
+
     #building-bridges p {
         font-size: 1rem;
     }
-    
-    
+
+
 }
 
 /* number section styling  */
@@ -1046,7 +1128,8 @@ padding-left: 36px;
 #numbers .numbers-head {
     font-size: 3.5rem;
     margin-bottom: 12px;
-    color:var(--primary-color) /* Adjust color */
+    color: var(--primary-color)
+        /* Adjust color */
 }
 
 .numbers-container {
@@ -1069,27 +1152,171 @@ padding-left: 36px;
 /* Responsive */
 @media (max-width: 768px) {
     .numbers-container {
-        align-items: center;
-       gap: 10%;
+        gap: 11%;
+        justify-content: space-between;
     }
-    #numbers .numbers-head {
-        font-size: 3.2rem;
-        margin-bottom: 10px;
-    }
-    #numbers .numbers-subhead {
-        font-size: 1rem;
-    }
-}
-@media (max-width: 768px) {
-    .numbers-container {
-       gap: 11%;
-       justify-content: space-between;
-    }
+
     #numbers .numbers-head {
         font-size: 3.2rem;
         margin-bottom: 9px;
     }
+
     #numbers .numbers-subhead {
         font-size: 1rem;
     }
+}
+
+/* meet our founder styling  */
+
+#meet-founder {
+    padding: 3.125rem 9%;
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+}
+
+.content {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h2 {
+    font-size: 3.3rem;
+    /* Adjusted size */
+    line-height: 1.2;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--headline);
+}
+
+.sub-headline {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--headline);
+}
+
+.bio-head {
+    color: var(--headline);
+    font-size: 1rem;
+}
+
+.bio {
+    color: #404040;
+    font-size: 0.8rem;
+}
+
+.founder-image {
+    position: relative;
+    width: 50%;
+}
+
+.founder-image {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.man-image {
+    width: 100%;
+    /* Takes full width of .founder-image */
+    /* height: auto; */
+    position: relative;
+    z-index: 2;
+    left: 10%;
+    height: 100%;
+}
+
+.circle-image {
+    position: absolute;
+    bottom: -9%;
+    left: 5%;
+    /* Adjust based on design */
+    height: auto;
+    border-radius: 50%;
+    z-index: 3;
+    width: 50%;
+}
+
+.decor-image {
+    position: absolute;
+    top: 60%;
+    right: 0%;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 30%;
+    /* Adjust size */
+}
+
+
+/* responsive meet our founder section  */
+@media (max-width:1050px) {
+    h2 {
+        font-size: 3.1rem;
+        /* Adjusted size */
+        line-height: 1.2;
+        margin-bottom: 19px;
+    }
+
+    .sub-headline {
+        font-size: 1rem;
+    }
+
+    .bio-head {
+        font-size: 1rem;
+    }
+
+    .bio {
+        font-size: 0.8rem;
+    }
+}
+
+/* responsive meet our founder section  */
+@media (max-width:937px) {
+    h2 {
+        font-size: 2.9rem;
+        /* Adjusted size */
+    }
+
+    .sub-headline {
+        font-size: 1rem;
+    }
+
+    .bio-head {
+        font-size: 1rem;
+    }
+
+    .bio {
+        font-size: 0.8rem;
+    }
+
+    .decor-image {
+        top: 59%;
+    }
+
+    .circle-image {
+        bottom: -5%;
+    }
+}
+
+@media (max-width: 814px) {
+    .decor-image {
+        top: 58%;
+    }
+
+    .circle-image {
+        bottom: -4%;
+    }
+    h2 {
+        font-size: 2.7rem;
+        /* Adjusted size */
+    }
+
+    .sub-headline {
+        padding-left: 1rem;
+    }
+
 }
