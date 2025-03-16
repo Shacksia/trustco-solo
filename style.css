@@ -1069,13 +1069,25 @@ padding-left: 36px;
 /* Responsive */
 @media (max-width: 768px) {
     .numbers-container {
-        justify-content: center;
         align-items: center;
        gap: 10%;
     }
     #numbers .numbers-head {
         font-size: 3.2rem;
         margin-bottom: 10px;
+    }
+    #numbers .numbers-subhead {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 768px) {
+    .numbers-container {
+       gap: 11%;
+       justify-content: space-between;
+    }
+    #numbers .numbers-head {
+        font-size: 3.2rem;
+        margin-bottom: 9px;
     }
     #numbers .numbers-subhead {
         font-size: 1rem;
