@@ -1036,3 +1036,48 @@ padding-left: 36px;
     
     
 }
+
+/* number section styling  */
+#numbers {
+    text-align: center;
+    padding: 4rem 9%;
+}
+
+#numbers .numbers-head {
+    font-size: 3.5rem;
+    margin-bottom: 12px;
+    color:var(--primary-color) /* Adjust color */
+}
+
+.numbers-container {
+    display: flex;
+    justify-content: space-between;
+    /* gap: 50px; */
+    flex-wrap: wrap;
+}
+
+.number-item {
+    text-align: center;
+}
+
+#numbers .numbers-subhead {
+    font-size: 1.2rem;
+    color: #1E1E1E;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .numbers-container {
+        justify-content: center;
+        align-items: center;
+       gap: 10%;
+    }
+    #numbers .numbers-head {
+        font-size: 3.2rem;
+        margin-bottom: 10px;
+    }
+    #numbers .numbers-subhead {
+        font-size: 1rem;
+    }
+}
