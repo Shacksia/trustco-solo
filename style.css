@@ -1166,15 +1166,19 @@ a {
     }
 }
 
-/* meet our founder styling  */
-
+/* Meet Our Founder Section */
 #meet-founder {
     padding: 3.125rem 9%;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     gap: 0;
 }
 
+
+
+
+/* Content Area */
 .content {
     max-width: 50%;
     display: flex;
@@ -1184,7 +1188,6 @@ a {
 
 h2 {
     font-size: 3.3rem;
-    /* Adjusted size */
     line-height: 1.2;
     font-weight: bold;
     margin-bottom: 20px;
@@ -1207,14 +1210,10 @@ h2 {
     font-size: 0.8rem;
 }
 
+/* Founder Image */
 .founder-image {
     position: relative;
     width: 50%;
-}
-
-.founder-image {
-    position: relative;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1222,25 +1221,23 @@ h2 {
 
 .man-image {
     width: 100%;
-    /* Takes full width of .founder-image */
-    /* height: auto; */
+    object-fit: contain; /* Ensures proper scaling */
     position: relative;
     z-index: 2;
-    left: 10%;
-    height: 100%;
 }
 
+/* Circular Profile Overlay */
 .circle-image {
     position: absolute;
     bottom: -9%;
     left: 5%;
-    /* Adjust based on design */
+    width: 50%;
     height: auto;
     border-radius: 50%;
     z-index: 3;
-    width: 50%;
 }
 
+/* Decorative Element */
 .decor-image {
     position: absolute;
     top: 60%;
@@ -1248,23 +1245,16 @@ h2 {
     transform: translateY(-50%);
     z-index: 1;
     width: 30%;
-    /* Adjust size */
 }
 
-
-/* responsive meet our founder section  */
-@media (max-width:1050px) {
+/* Responsive Adjustments */
+@media (max-width: 1050px) {
     h2 {
         font-size: 3.1rem;
-        /* Adjusted size */
-        line-height: 1.2;
         margin-bottom: 19px;
     }
 
-    .sub-headline {
-        font-size: 1rem;
-    }
-
+    .sub-headline,
     .bio-head {
         font-size: 1rem;
     }
@@ -1274,23 +1264,9 @@ h2 {
     }
 }
 
-/* responsive meet our founder section  */
-@media (max-width:937px) {
+@media (max-width: 937px) {
     h2 {
         font-size: 2.9rem;
-        /* Adjusted size */
-    }
-
-    .sub-headline {
-        font-size: 1rem;
-    }
-
-    .bio-head {
-        font-size: 1rem;
-    }
-
-    .bio {
-        font-size: 0.8rem;
     }
 
     .decor-image {
@@ -1303,6 +1279,14 @@ h2 {
 }
 
 @media (max-width: 814px) {
+    h2 {
+        font-size: 2.7rem;
+    }
+
+    .sub-headline {
+        padding-left: 1rem;
+    }
+
     .decor-image {
         top: 58%;
     }
@@ -1310,13 +1294,63 @@ h2 {
     .circle-image {
         bottom: -4%;
     }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    #meet-founder {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 5%;
+    }
     h2 {
-        font-size: 2.7rem;
-        /* Adjusted size */
+        font-size: 2.5rem;
+    margin-bottom: 13px;
+
     }
 
     .sub-headline {
         padding-left: 1rem;
     }
 
+    .content {
+        max-width: 100%;
+      align-items: center;
+    }
+
+    .founder-image {
+        width: 100%;
+        order: 1;
+    }
+
+    .man-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .circle-image {
+        width: 40%;
+        left: 5%;
+        bottom: -5%;
+    }
+
+    .decor-image {
+        width: 25%;
+        right: 10%;
+        top: 60%;
+    }
+}
+@media (max-width: 768px) {
+    .content{
+        gap: 15px;
+    }
+    h2 {
+        font-size: 2.2rem;
+    margin-bottom: 10px;
+
+    }
+
+    .sub-headline {
+        padding-left: 0.9rem;
+    }
 }
