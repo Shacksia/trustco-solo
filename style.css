@@ -443,7 +443,7 @@ body {
 
 @media screen and (max-width: 480px) {
     .hero-content .headline {
-        font-size: 2.8rem;
+        font-size: 2.3rem;
         line-height: 1;
 
     }
@@ -722,10 +722,33 @@ line-height: 1.3;
 } */
 
 /* Responsive Design for benefits*/
+@media (max-width: 1160px){
+     .benefit-cards {
+        flex-wrap: wrap;
+    }
+    .benefits{
+        flex-wrap: wrap;
+    }
+}
+
 @media (max-width: 768px) {
     .benefit-cards {
         flex-direction: column;
     }
+   
+}
+@media (max-width: 548px) {
+    #benefits{
+        flex-direction: column;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    .benefits-header{
+        align-items: center;
+        text-align: center;
+        
+    }
+
 }
 /* Responsive Adjustments for video section*/
 @media (max-width: 480px) {
@@ -733,6 +756,7 @@ line-height: 1.3;
     #benefits{
         flex-direction: column;
         gap: 1rem;
+        flex-wrap: wrap;
     }
     .benefits-header{
         align-items: center;
@@ -769,126 +793,246 @@ font-size: 0.9rem;
 }
 
 /* Building Bridges styling  */
- .bridge-section {
+.bridge-section {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
-   
-    padding:0rem 5% 0 0;
-
+    padding: 0rem 5% 0 0;
+    flex-wrap: nowrap; /* Ensures items stay in a row */
 }
+
 #building-bridges .bridge-container {
-   
     display: flex;
     align-items: center;
-    gap: 10%;
-
-    /* max-width: 1200px; */
-    /* background: white; */
-    /* border-radius: 10px; */
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
-    /* overflow: hidden; */
+    gap: 5%; /* Reduced gap for better alignment */
+    flex-wrap: nowrap; /* Prevents wrapping in desktop view */
 }
+
 #building-bridges .image-container {
     position: relative;
-    width: 50%;
-    /* flex: 1; */
+    width: 50%; /* Reduced size for better layout */
 }
+
 #building-bridges .image-container img {
     width: 100%;
     height: auto;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
-.award-badge {
+
+#building-bridges .award-badge {
     position: absolute;
-    bottom: 10%; /* Adjust position below the image */
-    left: 100%; /* Center it */
-    transform: translateX(-50%); /* Fine-tune centering */
+    bottom: 5%; /* Adjusted for better positioning */
+    left: 95%; /* Ensures it stays in proper alignment */
+    transform: translateX(-50%);
     background: var(--primary-color);
     color: var(--text-white);
-    /* padding: 25px; */
     border-radius: 50%;
     text-align: center;
-    /* font-size: 16px; */
-    font-weight: bold;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 220px;
-    height: 220px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    border: 4px solid var(--text-white);
-
+    width: 220px; /* Reduced size */
+    height: 220px; /* Reduced size */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    border: 3px solid var(--text-white);
 }
-.award-icon-border {
-    width: 50px;
-    height: 50px;
+
+#building-bridges .award-icon-border {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: var(--secondary-color);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-bottom: 15px;
-}
-.award-icon {
-    width: 4vw;
-    height: 4vh;
+    margin-bottom: 10px;
 }
 
-#building-bridges .bridge-head{
-    font-size: 3vw;
-    
+#building-bridges .award-icon {
+    width: 3.4vw;
+    height: 3.4vh;
 }
-#building-bridges .bridge-subhead{
-    font-size: 1vw;
+
+#building-bridges .bridge-head {
+    font-size: 2.5rem; /* Reduced for better fitting */
+}
+
+#building-bridges .bridge-subhead {
+    font-size: 1.2rem;
     color: var(--text-white);
     line-height: 1.6;
-    padding: 0%;
-    margin: 0;
     font-weight: 400;
 }
+
 #building-bridges .content-container {
     flex: 1;
-    padding: 0 0 0 30px;
-    gap: 20px;
+    padding: 0 0 0 20px; /* Reduced padding */
+    position: relative;
+    gap: 0;
 }
+
 #building-bridges h2 {
-    font-size: 3.3rem;
+    font-size: 3.3rem; /* Adjusted size */
     line-height: 1.2;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     color: #12141D;
 }
+
 #building-bridges .highlight {
     color: #aeb1b4;
 }
+
 #building-bridges p {
-    font-size: 1.4vw;
+    font-size: 1.2rem; /* Reduced size */
     color: #12141D;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-.btn-arrow {
+#building-bridges .btn-arrow {
     background-color: var(--primary-color);
     color: var(--text-white);
     display: flex;
     align-items: center;
-    gap: 10px; /* Space between text and arrow */
+    gap: 8px;
 }
 
-.arrow-icon {
+#building-bridges .arrow-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 28px; /* Adjust as needed */
-    height: 28px; /* Same as width for a perfect circle */
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
-    background-color: var(--secondary-color); /* Background for the rounded arrow */
-    color: var(--text-white); /* Arrow color */
-    font-size: 18px;
+    background-color: var(--secondary-color);
+    color: var(--text-white);
+    font-size: 16px;
     font-weight: bold;
 }
 
+/* Responsive Design */
+@media (max-width: 1080px) {
+    #building-bridges .bridge-container {
+        gap: 5%; /* Reduced gap */
+    }
+    #building-bridges .award-badge {
+        width: 180px; /* Reduced size */
+        height: 180px; /* Reduced size */
+    }
+    
+    #building-bridges .award-icon-border {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 7px;
+    }
+    #building-bridges .award-icon-border {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+    
+    #building-bridges .award-icon {
+        width: 3vw;
+        height: 3vh;
+    }
+    
+    #building-bridges .bridge-head {
+        font-size: 2rem; /* Reduced for better fitting */
+    }
+    
+    #building-bridges .bridge-subhead {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+ 
+    /* Building Bridges styling  */
+.bridge-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 3% 0 0;
+    flex-wrap: nowrap; /* Ensures items stay in a row */
+}
+}
+@media (max-width: 960px) {
+    #building-bridges h2 {
+        font-size: 2.9rem; /* Adjusted size */
+        line-height: 1;
+    }
+  
+    
+    #building-bridges p {
+        font-size: 1rem; /* Reduced size */
+        margin-bottom: 12px;
+    }
+
+    
+   
+}
+@media (max-width: 814px) {
+    #building-bridges h2 {
+        font-size: 2.6rem; /* Adjusted size */
+    }
+  
+    #building-bridges .content-container{
+padding-left: 36px;
+    }
+  
+}
+@media (max-width: 768px) {
+    #building-bridges .bridge-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+   
+    /* Building Bridges styling  */
+.bridge-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 3% 0 0;
+    flex-wrap: nowrap; /* Ensures items stay in a row */
+}
+
+    #building-bridges .image-container {
+        width: 90%; /* Adjusted width */
+    }
+    #building-bridges .image-container img {
+        border-radius: 10px;
+    }
+    #building-bridges .content-container {
+        padding: 20px;
+    }
+   
+    #building-bridges h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    #building-bridges p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #building-bridges .image-container {
+        width: 80%; /* Adjusted width */
+    }
+    #building-bridges .bridge-section {
+        padding: 20px 10px;
+    }
+    #building-bridges h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    #building-bridges p {
+        font-size: 1rem;
+    }
+    
+    
+}
