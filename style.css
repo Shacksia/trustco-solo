@@ -2068,3 +2068,192 @@ h4 {
         order: 1;
     }
 }
+
+/* contact page section  */
+#contact-page  .navbar-section{
+background-color: var(--text-white);
+}
+
+.contact-info {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    flex-direction: column;
+padding: 3.125rem 9%;
+}
+
+.contact-headtext{
+    text-align: center;
+    padding: 0% 16%;
+}
+.contact-options{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+.contact-card {
+    background: var(--text-white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.contact-card img {
+    width: 50px;
+}
+.contact-card h3 {
+    margin: 0;
+    color: #12141D;
+    font-size: 1.5rem;
+}
+.contact-card p {
+    color: #404040;
+    font-size: 1rem;
+}
+.contact-card a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+}
+.contact-card a:hover {
+    text-decoration: underline;
+}
+.contact-card a::after {
+    content: ' →'; /* This adds the arrow mark */
+    font-size: 16px;
+    margin-left: 5px;
+}
+.form-section{
+    padding: 3.125rem 9%;
+}
+hr{
+    color: var(--primary-color);
+    margin: 10px;
+}
+.contact-form{
+    margin: 20px 8%;
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.form-group {
+    position: relative;
+    width: 100%;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #91A7B0;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #91A7B0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+.placeholder-icon{
+   width: 25px;
+   height: auto;
+   transition: all 0.3s ease; /* Smooth transition */
+}
+
+
+.form-group input:focus + label .placeholder-icon,
+.form-group textarea:focus +label .placeholder-icon,
+.form-group input:not(:placeholder-shown) +label .placeholder-icon,
+.form-group textarea:not(:placeholder-shown) +label .placeholder-icon {
+   width: 15px;
+   height: 14px;
+}
+.form-group input:focus + label,
+.form-group textarea:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:not(:placeholder-shown) + label {
+    top: 5px;
+    left: 10px;
+    font-size: 12px;
+    color: #91A7B0;
+    background: var(--text-white);
+    padding: 0 5px;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; /* Makes it round */
+    background-color: #D7E0E5;
+    border: 2px solid #D7E0E5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox-container input[type="checkbox"]::before {
+    content: "✔"; /* Checkmark symbol */
+    font-size: 14px;
+    color: black;
+    display: none;
+    position: absolute;
+}
+
+.checkbox-container input[type="checkbox"]:checked::before {
+    display: block;
+}
+.contact-cta-align{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.form-group .textarea-label{
+   top: 15%;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    .full-width {
+        grid-column: span 1;
+    }
+}
