@@ -2249,11 +2249,40 @@ hr{
 }
 
 /* Responsive */
-@media (max-width: 500px) {
+@media (max-width: 780px) {
+    .contact-headtext{
+        padding: 0% 0;
+    }
+    .contact-info{
+        background-color: var(--text-white);
+    }
+    .contact-card{
+        box-shadow: none;
+    }
+    .contact-options{
+flex-direction: column;
+    }
+    .form-group input, .form-group textarea {
+        font-size: 14px;
+    }
+    .contact-form{
+      padding: 20px 2%;
+    }
     .form-grid {
         grid-template-columns: 1fr;
     }
     .full-width {
         grid-column: span 1;
     }
+    .form-group{
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 500px) {
+    
+    .cta-button{
+        font-size: 0.9rem;
+        padding: 10px 14px;
+    }
+    
 }
