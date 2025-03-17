@@ -1811,7 +1811,7 @@ h4 {
         /* bottom: -34px; */
     }
 }
-@media(max-width:960px) {
+@media(max-width:862px) {
     .girl-img{
         bottom: -23px;
     }
@@ -1871,16 +1871,17 @@ h4 {
 /* footer section styling  */
 
 .footer {
-    padding: 9% 6%;
-    display: flex;
+
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     position: relative;
-    bottom: 0;
+    /* bottom: 0; */
     width: 100%;
 }
 
 .footer-container {
+    padding: 9% 9%;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -1966,4 +1967,87 @@ h4 {
 
 .footer-column ul li a:hover {
     color: #007bff;
+}
+@media screen and (max-width: 767px) {
+    .footer-middle{
+        font-size: 1rem;
+    }
+    .footer-right {
+     font-size: 1rem;
+        /* margin-bottom: 20px; */
+    }
+    .footer-column h4 {
+        font-size: 1rem;
+    }
+
+}
+/* ===== Mobile View (Max 767px) ===== */
+@media screen and (max-width: 767px) {
+
+    .footer-column h4 {
+        font-size:0.95
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-left{width: 100%;
+        align-items: center;
+    }
+    .footer-middle{
+        width: 100%;
+        align-items: center;
+        font-size: 0.95rem;
+    }
+    .footer-right {
+        width: 100%;
+     text-align: left;
+     font-size: 0.95rem;
+        /* margin-bottom: 20px; */
+    }
+
+
+
+    .footer-column {
+        margin-bottom: 15px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* site credit section  */
+#site-credit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: var(--background-color);
+    padding: 2% 9%;
+    font-size: 1rem;
+    color: #92A7B0;
+}
+.site-credit-links {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.site-credit-links a{
+    color: #92A7B0;
+
+}
+.language-select{
+    color: #92A7B0;
+    border: none;
+    background-color: var(--background-color);
+}
+.language-container{
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
