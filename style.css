@@ -1468,7 +1468,9 @@ h4 {
         flex-direction: column;
         align-items: center;
     }
-
+    .testimonial-title{
+        flex-direction: column;
+    }
     .testimonial {
         width: 90%;
         padding: 1rem;
@@ -1587,5 +1589,53 @@ font-weight: 400;
 
     .blog-container {
         grid-template-columns: 1fr;
+    }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Adjust header layout */
+    .blog-header {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .bio-head {
+        margin-top: 10px;
+        font-size: 1rem;
+    }
+
+    /* Single column layout for better readability */
+    .blog-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Adjust blog card styling */
+    .blog-card {
+        border-radius: 6px;
+        border: 1px solid var(--background-color);
+        box-shadow: none;
+    }
+
+    .blog-card img {
+        height: 180px; /* Slightly reduce image height for better fit */
+    }
+
+    .blog-content {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .blog-date {
+        font-size: 0.9rem;
+    }
+
+    .blog-excerpt {
+        font-size: 0.9rem;
+    }
+
+    .read-more {
+        font-size: 1rem;
     }
 }
