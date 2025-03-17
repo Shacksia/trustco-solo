@@ -1811,7 +1811,7 @@ h4 {
         /* bottom: -34px; */
     }
 }
-@media(max-width:862px) {
+@media(max-width:960px) {
     .girl-img{
         bottom: -23px;
     }
@@ -1867,23 +1867,23 @@ h4 {
         right: 0;
     }
 }
-/* Footer section styling */
+
+/* footer section styling  */
+
 .footer {
     padding: 9% 6%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    position: relative;
+    bottom: 0;
     width: 100%;
-    background-color: #f8f9fa;
 }
 
-/* Container */
 .footer-container {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 /* Left Section */
@@ -1891,17 +1891,26 @@ h4 {
     width: 33.3%;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 50px;
 }
 
 .footer-logo {
-    width: 180px;
+    height: auto;
+    width: 200px;
 }
+
 
 /* Social Media Icons */
 .social-icons {
     display: flex;
+    flex-direction: row;
     gap: 10px;
+}
+
+.social-icon img {
+    width: 25px;
+    height: 25px;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .social-icon {
@@ -1913,33 +1922,29 @@ h4 {
     border-radius: 50%;
     background-color: #D7E0E5;
     color: var(--text-white);
+    font-size: 18px;
 }
 
-.social-icon img {
-    width: 25px;
-    height: 25px;
-    transition: opacity 0.3s ease-in-out;
-}
 
 /* Middle Section */
 .footer-middle {
     width: 33.3%;
-    font-size: 1rem;
-    text-align: left;
+    font-size: 1.2rem;
     color: var(--text-color);
+
 }
 
 /* Right Section: Navigation */
 .footer-right {
     display: flex;
     width: 33.3%;
-    font-size: 1rem;
+    font-size: 1.2rem;
     justify-content: space-evenly;
     font-weight: 500;
 }
 
 .footer-column h4 {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #000;
 }
@@ -1955,48 +1960,10 @@ h4 {
 
 .footer-column ul li a {
     text-decoration: none;
-    color: var(--text-color);
     transition: color 0.3s ease-in-out;
+    color: var(--text-color);
 }
 
 .footer-column ul li a:hover {
     color: #007bff;
-}
-
-/* ===== Mobile View (Max 767px) ===== */
-@media screen and (max-width: 767px) {
-    .footer {
-        padding: 7% 4%;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 30px;
-    }
-
-    .footer-left{
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-    }
-    .footer-middle,
-    .footer-right {
-        /* text-align: center; */
-        width: 100%;
-    }
-
-    .footer-right {text-align: left;
-    }
-    .footer-middle{
-        text-align: center;
-    }
-    .footer-column {
-        margin-bottom: 15px;
-    }
-
-    .social-icons {
-        justify-content: center;
-    }
 }
