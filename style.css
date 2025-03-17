@@ -1811,7 +1811,7 @@ h4 {
         /* bottom: -34px; */
     }
 }
-@media(max-width:960px) {
+@media(max-width:862px) {
     .girl-img{
         bottom: -23px;
     }
@@ -1871,16 +1871,17 @@ h4 {
 /* footer section styling  */
 
 .footer {
-    padding: 9% 6%;
+   
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    bottom: 0;
+    /* bottom: 0; */
     width: 100%;
 }
 
 .footer-container {
+    padding: 9% 9%;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -1966,4 +1967,41 @@ h4 {
 
 .footer-column ul li a:hover {
     color: #007bff;
+}
+
+/* ===== Mobile View (Max 767px) ===== */
+@media screen and (max-width: 767px) {
+   
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-left{width: 100%;
+        align-items: center;
+    }
+    .footer-middle{
+        width: 100%;
+        align-items: center;
+        font-size: 1rem;
+    }
+    .footer-right {
+        width: 100%;
+     text-align: left;
+     font-size: 1rem;
+        /* margin-bottom: 20px; */
+    }
+
+  
+
+    .footer-column {
+        margin-bottom: 15px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
 }
