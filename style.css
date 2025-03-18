@@ -400,3 +400,22 @@ Letter-spacing:-2%
 
    
 }
+
+/* brand section css  */
+.trusted-section{
+    padding: 3.125rem 4.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trusted-section p{
+    font-weight: 500;
+    color: #000;
+    font-size: 0.8rem;
+
+}
+.brand-img{
+height:  1.1875rem;
+width: 5.3125rem;
+}
