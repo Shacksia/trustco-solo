@@ -1203,6 +1203,7 @@ h2 {
 .bio-head {
     color: var(--headline);
     font-size: 1rem;
+    white-space: nowrap;
 }
 
 .bio {
@@ -1369,12 +1370,18 @@ h2 {
     justify-content: space-between;
 }
 
-/* Testimonials Container */
-.testimonials-container {
+/* .testimonials-container {
     display: flex;
     gap: 1.5rem;
     justify-content: space-between;
     flex-wrap: nowrap;
+} */
+/* Testimonials Container */
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 /* Testimonial Box */
@@ -1383,51 +1390,100 @@ h2 {
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 50%;
+    width: 45%;  /* Two per row on desktop */
     text-align: left;
     position: relative;
+    transition: all 0.3s ease-in-out;
 }
 
-blockquote{
-font-size: 1.4rem;
-font-weight: 500;
+blockquote {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.5;
 }
 
-
-/* testimonial Info */
+/* Testimonial Info */
 .testimonial-info {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-top: 20px;
 }
-h4{
+
+h4 {
     font-weight: 700;
     color: #000;
 }
 
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Pagination Dots */
+.pagination-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
 .dot {
     height: 10px;
-    width: 20px;
-    background-color:#D7E0E5;
-    border-radius: 40%;
+    width: 10px;
+    background-color: #D7E0E5;
+    border-radius: 50%;
     display: inline-block;
-    margin: 0 4px;
+    margin: 0 5px;
     cursor: pointer;
 }
-.pagination-dots{
-    text-align: center;
-}
+
 .dot.active {
     background-color: var(--primary-color);
-    width: 50px;
+    width: 20px;
     border-radius: 10px;
 }
 
-/* Responsive Styles */
+/* ======= Responsive Styles ======= */
+
+/* Tablet View */
+@media (max-width: 1024px) {
+    .testimonials-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .testimonial {
+        width: 80%;
+    }
+
+    blockquote {
+        font-size: 1.2rem;
+    }
+}
+
+/* Mobile View */
 @media (max-width: 768px) {
     .testimonials-container {
         flex-direction: column;
         align-items: center;
+    }
+
+    .testimonial {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    blockquote {
+        font-size: 1rem;
+    }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    h4 {
+        font-size: 1rem;
     }
 }
