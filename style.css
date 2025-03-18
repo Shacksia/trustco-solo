@@ -289,7 +289,7 @@ body {
     justify-content: center;
     text-align: center;
     gap: 20px;
-    padding: 2rem 4.9rem;
+    padding: 2rem 9%;
 }
 
 /* Wrapper for images */
@@ -424,7 +424,7 @@ Letter-spacing:-2%
 
 /* Brand Section */
 .trusted-section {
-    padding: 3.125rem 4.9rem;
+    padding: 3.125rem 9%;
     display: flex;
     align-items: center;
     justify-content: space-between; /* Distribute evenly */
@@ -479,3 +479,86 @@ Letter-spacing:-2%
         font-size: 0.9rem;
     }
 }
+
+/* General Section Styling */
+#video-section {
+    background-color: var(--primary-color); /* Dark Blue */
+    padding: 3.125rem 9% 0 9%;
+  
+}
+
+/* Container for Text + Video */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    max-width:100%;
+    gap: 50px;
+    align-items: center;
+}
+
+/* Left Content - Text */
+.text-content {
+    display: flex;
+    justify-content:space-around;
+    gap:2rem;
+width: 100%;
+}
+
+.video-title {
+    width: 50%;
+    font-size: 2.7rem;
+    font-weight: bold;
+    color: var(--text-white);
+    line-height: 1.2;
+}
+
+.video-title span {
+    color: #fab412; /* Gold/yellow for emphasis */
+}
+
+.video-description {
+    width: 50%;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+/* Right Content - Video */
+.video-container {
+    position: relative;
+    /* max-width: 550px; */
+    width: 100%;
+}
+
+.video-thumbnail {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+
+    display: block;
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--background-color);
+    border-radius: 50%;
+    padding: 4%;
+    transition: 0.3s ease-in-out;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.play-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Hover Effect */
+.video-container:hover .play-icon {
+    background: rgba(122, 122, 122, 0.8);
+}
+
+
