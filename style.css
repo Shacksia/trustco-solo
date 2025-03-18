@@ -1,99 +1,373 @@
 /* Import Lato font */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
-/* Apply global font settings */
-body {
-    font-family: 'Lato', sans-serif; /* Default font */
-    font-size: 16px; /* Base font size */
-    line-height: 1.6; /* Improves readability */
-    color: #333; /* Dark gray text color */
-}
-
-h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-h2 {
-    font-size: 2rem;
-}
-
-p {
-    font-size: 1rem;
-}
-
-:root {
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
-    --background-color: #FFFFFF;
-    --text-color: #333;
-    --signup-btn-color:#043A53;
-    
-
-}
-
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
-
-h1, h2 {
-    color: var(--primary-color);
-}
-
-a {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-a:hover {
-    color: darkblue;
-}
-
-/* Apply a reset to remove default margin & padding */
+/* Reset Default Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Consistent spacing */
-body {
-    padding: 16px;
-    margin: 0;
+/* Root Variables */
+:root {
+    --primary-color: #043A53;
+    --secondary-color: #6c757d;
+    --background-color: #F2F5F6;
+    --text-color: #333;
+    --primary-btn-color: #043A53;
+    --primary-btn-hover: #022c3f;
+    --text-white: #FFFFFF;
 }
 
+/* Body Styling */
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0;
 }
 
-/* Ensure text spacing is optimal */
-p {
-    margin-bottom: 1rem;
+/* Hero Section */
+#hero {
+    background-color: var(--background-color);
+    padding: 0;
 }
 
-h1, h2, h3 {
-    margin-bottom: 0.5rem;
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 20px;
+    position: relative;
+    height: 98px;
 }
 
-/* Improve buttons */
-button {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px 20px;
+/* Logo on the Left */
+.logo {
+    position: absolute;
+    left: 20px;
+}
+
+.logo img {
+    max-height: 50px;
+}
+
+/* Center Navigation Links */
+.menu-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-btn-hover);
+}
+
+/* Auth Buttons on the Right */
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    right: 20px;
+}
+
+/* Primary Button */
+.primary-btn {
+    padding: 12px 16px;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-}
-
-signup-btn{
+    font-size: 1rem;
     border-radius: 42px;
-    background-color: var(--signup-btn-color);
-  
+}
+
+/* Login Button */
+.login-btn {
+    color: var(--primary-color);
+    background-color: #FFFFFF;
+}
+
+.login-btn:hover {
+    background-color: #ffffffce;
+}
+
+/* Sign-Up Button */
+.signup-btn {
+    background-color: var(--primary-btn-color);
+    color: var(--text-white);
+    font-size: 1rem;
+}
+
+.signup-btn:hover {
+    background-color: var(--primary-btn-hover);
+}
+.cta-buttons {
+    display: flex; /* Ensures buttons are aligned properly */
+    justify-content: center; /* Centers buttons horizontally */
+    align-items: center; /* Aligns vertically */
+    padding: 1rem; /* Keeps padding consistent */
+    gap: 1.5rem; /* Adjust gap between buttons */
+}
+.get-started-btn {
+    background-color: var(--primary-btn-color);
+    color: var(--text-white);
+    font-size: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adds a soft shadow */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Add a hover effect */
+.get-started-btn:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+.secondary-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    background: none;
+    border: none;
+    color: var(--primary-color); /* Black text */
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Play Button Circle */
+.secondary-btn .play-circle {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-btn-color); /* Use primary color */
+    border-radius: 50%; /* Circular shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* White Play Triangle */
+.secondary-btn .play-circle::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid var(--text-white); /* White play icon */
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    left: 50%;
+    top: 50%;
+    transform: translate(-30%, -50%);
+}
+
+/* Hover Effect */
+.secondary-btn:hover {
+    opacity: 0.8;
+}
+
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Responsive Navbar for Mobile */
+@media screen and (max-width: 870px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+    }
+    .navbar{
+        background-color: var(--text-white);
+    }
+
+    .menu-container {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        right: 0; /* Aligns navbar to the right */
+        width: fit-content;
+        background-color: var(--background-color);
+        padding: 15px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        gap: 0;
+    }
+
+    /* Show Menu When Active */
+    .menu-container.active {
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start; /* Aligns content to the left inside the menu */
+    }
+
+    /* Ensure Nav Links Appear First */
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Move Auth Buttons to the Bottom */
+    .auth-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        position: relative;
+        padding: 15px; /* Space between nav links and buttons */
+        order: 1; /* Moves auth-buttons below nav-links */
+    }
+
+    .auth-buttons button {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+/* Default Layout (Desktop) */
+.hero-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    padding: 30px 100px;
+}
+
+/* Wrapper for images */
+.hero-images {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Individual images */
+.hero-image {
+    width: 250px; /* Adjust width as needed */
+}
+
+.hero-frame-responsive{
+    display: none;
+}
+.hero-content{
+padding: 20px;
+}
+.hero-content .headline{
+font-weight:bolder;
+font-size: 3.8rem;
+line-height: 1;
+letter-spacing: -2%;
+text-align: center;
+Letter-spacing:-2%
 
 }
-button:hover {
-    background-color: darkblue;
+.trustpilot{
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: 800;
+}
+.green-star {
+    color: #00B67A; /* Trustpilot green */
+    font-size: 1.3rem;
+    margin-right: 5px;
+}
+.star-text{
+    opacity: 50%;
+    color: black;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.hero-content .sub-headline{
+    font-weight:bolder;
+    font-size: 1rem;
+    text-align: center;
+    color:#12141D;
+    opacity: 70%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    }
+
+.Trustco{
+    color: var(--primary-color);
+}
+@media screen and (max-width: 870px) {
+    .hero-frame{
+        display: none;
+    }
+    .cta-buttons {
+    flex-direction: column;
+}
+    .hero-frame-responsive {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-frame-responsive .hero-content {
+        order: 1; /* Content stays at the top */
+        width: 100%;
+    }
+
+    /* Ensure images are in a single row */
+    .hero-frame-responsive .hero-images {
+        order: 2;
+        display: flex;
+        flex-direction: row; /* Force images into a row */
+        justify-content: center;
+        align-items: center;
+        gap: 10px; /* Space between images */
+        width: 60%;
+    }
+
+    .hero-frame-responsive .hero-image {
+        width: 45%; /* Each image takes 45% of the width */
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+   
 }
