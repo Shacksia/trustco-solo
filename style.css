@@ -401,21 +401,60 @@ Letter-spacing:-2%
    
 }
 
-/* brand section css  */
-.trusted-section{
+/* Brand Section */
+.trusted-section {
     padding: 3.125rem 4.9rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between; /* Distribute evenly */
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 1.8rem;
 }
 
-.trusted-section p{
+/* Text Styling */
+.trusted-section p {
     font-weight: 500;
     color: #000;
-    font-size: 0.8rem;
-
+    font-size: 1rem;
 }
-.brand-img{
-height:  1.1875rem;
-width: 5.3125rem;
+
+
+
+/* Brand Logos */
+.brand-img {
+    height: auto;
+    width: 5rem; /* Adjust size */
+    max-width: 100%;
+}
+/* Responsive Adjustments */
+@media (max-width: 823px) {
+    .trusted-section {
+        gap: 1.2rem; /* Add spacing */
+    }
+   
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .trusted-section {
+        justify-content: center; /* Center-align for small screens */
+        gap: 1.1rem; /* Add spacing */
+    }
+    .brand-img {
+        width: 4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .trusted-section {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .brand-img {
+        width: 3.5rem;
+    }
+    .trusted-section p {
+        font-size: 0.9rem;
+    }
 }
