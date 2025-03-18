@@ -2060,3 +2060,21 @@ h4 {
    justify-content: center;
 
 }
+@media screen and (max-width: 767px) {
+    #site-credit{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 0.9rem;
+    }
+    .copyright{
+        order: 3;
+    }
+    .language-container{
+        order: 2;
+    }
+    .site-credit-links{
+        order: 1;
+    }
+
+}
